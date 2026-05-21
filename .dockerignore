@@ -1,0 +1,5 @@
+node_modules
+.env
+pier26-db.json
+.git
+*.log
