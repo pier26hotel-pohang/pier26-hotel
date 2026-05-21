@@ -50,6 +50,19 @@ async function sendSms(toPhone, text) {
   }
 }
 
+// ─── 임시 SMS 디버그 (확인 후 삭제) ─────────────────────────────────────────
+app.get('/api/sms-test', async (req, res) => {
+  const key = process.env.SOLAPI_API_KEY || '없음';
+  const secret = process.env.SOLAPI_API_SECRET ? '설정됨' : '없음';
+  const sender = process.env.SOLAPI_SENDER || '없음';
+  const notify = process.env.NOTIFY_PHONE || '없음';
+
+  console.log('[SMS-TEST] KEY:', key, 'SECRET:', secret, 'SENDER:', sender);
+
+  const sent = await sendSms(notify, '[PIER26] SMS 디버그 테스트');
+  res.json({ key, secret, sender, notify, sent });
+});
+
 // ─── 공개 API ────────────────────────────────────────────────────────────────
 
 // 문의 접수
