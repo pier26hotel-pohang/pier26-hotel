@@ -57,10 +57,23 @@ app.get('/api/sms-test', async (req, res) => {
   const sender = process.env.SOLAPI_SENDER || '없음';
   const notify = process.env.NOTIFY_PHONE || '없음';
 
-  console.log('[SMS-TEST] KEY:', key, 'SECRET:', secret, 'SENDER:', sender);
+  let error = null;
+  try {
+    const { SolapiMessageService } = require('solapi');
+    const service = new SolapiMessageService(
+      process.env.SOLAPI_API_KEY,
+      process.env.SOLAPI_API_SECRET
+    );
+    await service.send({
+      to: notify,
+      from: sender,
+      text: '[PIER26] SMS 디버그 테스트',
+    });
+  } catch (err) {
+    error = err.message + (err.response?.data ? ' / ' + JSON.stringify(err.response.data) : '');
+  }
 
-  const sent = await sendSms(notify, '[PIER26] SMS 디버그 테스트');
-  res.json({ key, secret, sender, notify, sent });
+  res.json({ key, secret, sender, notify, error });
 });
 
 // ─── 공개 API ────────────────────────────────────────────────────────────────
