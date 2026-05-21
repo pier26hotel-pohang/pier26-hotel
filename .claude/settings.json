@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp *)",
+      "Bash(cp -r *)",
+      "Bash(find *)",
+      "Bash(mkdir *)",
+      "Bash(ls *)",
+      "Bash(xcopy *)",
+      "Bash(robocopy *)",
+      "Bash(mv *)",
+      "Bash(dir *)"
+    ]
+  }
+}

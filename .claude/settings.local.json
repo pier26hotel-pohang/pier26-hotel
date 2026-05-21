@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node server.js)",
+      "Bash(curl -s http://localhost:3000/api/admin/stats -H \"x-admin-password: pier26admin2024\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(netstat -ano)",
+      "Bash(findstr :3000)",
+      "Bash(taskkill //F //PID 29176)",
+      "Bash(npx skills *)",
+      "Bash(find /c/Users/jsh79 -type d -name \"피어26\" 2>/dev/null | head -5)",
+      "Bash(find /c/Users/jsh79 -name \"피어26로고*\" 2>/dev/null | head -5)",
+      "Bash(cmd.exe /c \"dir /s /b C:\\\\Users\\\\jsh79\\\\* 2>nul | findstr /i 피어26\")",
+      "Bash(cmd.exe /c \"dir /s /b C:\\\\* 2>nul | findstr /i /c:\\\\\"pier26\\\\\" /c:\\\\\"피어\\\\\"\")",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(pip show *)",
+      "Bash(pip install *)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}
