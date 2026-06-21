@@ -117,6 +117,14 @@ a { text-decoration: none; color: inherit; }
   transition: border-color 0.25s, color 0.25s;
 }
 .cta-ghost:hover { border-color: var(--gold); color: var(--gold); }
+.cta-naver {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #03C75A; color: #fff;
+  padding: 16px 36px; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.04em; border-radius: 4px;
+  transition: background 0.25s, transform 0.25s;
+}
+.cta-naver:hover { background: #02b050; transform: translateY(-2px); }
 
 /* ══════════════════════════════════════════
    NAV
@@ -153,6 +161,18 @@ a { text-decoration: none; color: inherit; }
   transition: background 0.2s, color 0.2s !important;
 }
 .nav-book:hover { background: var(--navy) !important; color: #fff !important; }
+.nav-naver {
+  background: #03C75A !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  transition: background 0.2s !important;
+}
+.nav-naver:hover { background: #02b050 !important; color: #fff !important; }
 .nav-toggle {
   display: none; flex-direction: column; gap: 6px;
   background: none; border: none; cursor: pointer; padding: 4px;
@@ -529,6 +549,14 @@ a { text-decoration: none; color: inherit; }
   font-size: 1.05rem; font-weight: 500;
   transition: all 0.25s;
 }
+.contact-naver-btn {
+  display: flex; align-items: center; gap: 10px;
+  padding: 16px 24px; margin-bottom: 12px;
+  border-radius: 8px; font-weight: 700; font-size: 1rem;
+  background: #03C75A; color: #fff;
+  transition: all 0.25s;
+}
+.contact-naver-btn:hover { background: #02b050; transform: translateX(4px); }
 .contact-tel { background: var(--navy); color: var(--white); }
 .contact-tel:hover { background: #162d57; transform: translateX(4px); }
 .contact-sms-btn { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
